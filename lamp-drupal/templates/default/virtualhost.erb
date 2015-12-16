@@ -1,0 +1,28 @@
+<VirtualHost *:<%= @port %>>
+
+  ServerAdmin <%= @serveradmin %>
+
+  DocumentRoot <%= @sitepath %>/
+
+    RewriteEngine On
+  <Directory />
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Order deny,allow
+    Allow from all
+  </Directory>
+
+
+  <Directory <%= @sitepath %>/>
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Order deny,allow
+    Allow from all
+  </Directory>
+
+  LogLevel info
+
+  ErrorLog <%= @sitepath %>/logs/<%= @sitename %>-error.log
+  CustomLog <%= @sitepath %>/logs/<%= @sitename %>-access.log combined
+
+</VirtualHost>

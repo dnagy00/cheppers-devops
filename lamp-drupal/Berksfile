@@ -1,0 +1,16 @@
+source "https://supermarket.chef.io"
+
+metadata
+
+cookbook         "apt"
+cookbook         "build-essential"
+cookbook         "mysql"
+cookbook 				 "mysql2_chef_gem"
+cookbook 				 "database"
+cookbook 				 "git"
+cookbook 				 "apache2"
+cookbook 				 "php"
+cookbook 				 "drush"
+cookbook 				 "composer"
+cookbook 				 "activelamp_composer"
+cookbook 				 "activelamp_drupal"
